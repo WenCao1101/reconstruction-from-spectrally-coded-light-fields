@@ -110,7 +110,7 @@ model.load_weights(str(model_weights_path),
 tempdir_path = Path('/mnt/symphony/wen/lfcnn/reconstruction-from-spectrally-coded-light-fields-main/output')
 # Test
 print("Testing...")
-test_res = model.test(**test_kwargs)
+# test_res = model.test(**test_kwargs)
 print("... done.")
 
 print("Evaluating challenges...")
@@ -119,9 +119,16 @@ print("... done")
 
 # Test results
 print("Showing test results...")
-for key in test_res:
-    print("test_" + key, test_res[key])
+# for key in test_res:
+ #    print("test_" + key, test_res[key])
 print("... done.")
+
+  # Iterate over all scenes
+for i, metrics in enumerate(eval_res['metrics']):
+     # Iterate over metrics
+    for key in metrics:
+        print("eval"+key, metrics[key], i)
+    print("... done.")
 
 print("Saving results...")
 #tempdir_path = Path(os.environ['/mnt/symphony/wen/lfcnn/reconstruction-from-spectrally-coded-light-fields-main/output'])
