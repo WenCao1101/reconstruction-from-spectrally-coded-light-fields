@@ -1,0 +1,18 @@
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - tensorflow-gpu=2.4
+  - cudnn
+  - cudatoolkit
+  - numpy
+  - scipy
+  - imageio
+  - h5py
+  - matplotlib
+  - pandas
+  - pillow
+  - scikit-image
+  - pip:
+      - lfcnn
+      - tensorflow-addons
